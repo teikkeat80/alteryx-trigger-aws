@@ -34,7 +34,7 @@ class AyxAppExecutor:
         self.api_secret = api_secret
         self.ca_string = ca_string
         self.token = self.get_access_token()
-        self.ayx_url = "YOUR_ALTERYX_URL/DOMAIN_NAME" #e.g. gallery.xxx.com
+        self.ayx_url = "YOUR_ALTERYX_DOMAIN_URL" #e.g. gallery.xxx.com
 
     def get_access_token(self): #Get authorisation token for your Alteryx gallery
         auth_url = f"https://{self.ayx_url}/webapi/oauth2/token"
