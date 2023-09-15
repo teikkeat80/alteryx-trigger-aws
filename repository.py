@@ -50,7 +50,7 @@ class AyxAppExecutor:
                 headers={"Authorization": f"Basic {base64_bytes}"}
             )
             response = connection.getresponse()
-            print(f'status code: {response.status}') #Debugging purpose
+            print(f'status code: {response.status}')
             response_data = response.read().decode("utf-8")
             connection.close()
             token = json.loads(response_data)["access_token"]
@@ -71,7 +71,7 @@ class AyxAppExecutor:
         return ssl_connection
 
     def execute_app(self, app_id, json_payload): #Run the workflow based on app_id
-        job_url = f"https://{self.ayx_url}/webapi/user/v2/workflows/{app_id}/jobs/" #Modify to use other APIs if needed
+        job_url = f"https://{self.ayx_url}/webapi/user/v2/workflows/{app_id}/jobs/"
         headers = {
                 "Authorization": f"Bearer {self.token}",
                 "Content-type": "application/json"
