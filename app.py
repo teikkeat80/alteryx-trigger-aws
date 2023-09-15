@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     print("in lambda handler")
     print(json.dumps(event))
     app_id = "YOUR_ALTERYX_APP_ID"  #Obtained through Alteryx server URL
-    json_payload = json.dumps({"questions": [{"name": "", "value": ""}]}) #Modify for another API use cases
+    json_payload = json.dumps({"questions": [{"name": "", "value": ""}]})
     executor = AyxAppExecutor()
     result = executor.execute_app(app_id, json_payload)
     if result:
