@@ -1,6 +1,6 @@
 # Triggering_Alteryx_API_via_AWS_Lambda
 
-This is a project demonstrating how to run an Alteryx workflow from the Alteryx server/gallery via Alteryx gallery v2 APIs. As a result, you would be able to trigger your Alteryx workflow using AWS Lambda and Events. The scripts were written in python 3.11.
+This is a project demonstrating an AWS Lambda that runs an Alteryx workflow from the Alteryx server/gallery via Alteryx gallery v2 APIs. As a result, you would be able to trigger your Alteryx workflow using AWS Events (such as s3, cloud watch events, SQS etc. The scripts were written in python 3.11.
 
 ## Requirements
 1. AWS user
